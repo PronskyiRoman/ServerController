@@ -1,6 +1,18 @@
 import Testing
+import Vapor
+
 @testable import ServerController
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+@Suite("Test ServerController")
+struct TestServerController {
+  private final class ServerControllerTests: ServerController {
+    func routes() -> [Vapor.Routes] {
+      []
+    }
+  }
+
+  @Test
+  func emptyRoutes() async throws {
+    #expect(ServerControllerTests().routes().isEmpty)
+  }
 }
