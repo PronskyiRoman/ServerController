@@ -1,2 +1,5 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
+import Vapor
+
+public protocol ServerController {
+  func routes() -> [Routes]
+}
