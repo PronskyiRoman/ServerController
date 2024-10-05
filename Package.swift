@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "ServerController",
+  name: "serverController",
   platforms: [
     .macOS(.v13)
   ],
